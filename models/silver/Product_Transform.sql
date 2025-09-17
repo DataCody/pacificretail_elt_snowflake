@@ -64,7 +64,7 @@ $$;
 -- create task
 CREATE OR REPLACE TASK product_silver_merge_task
   WAREHOUSE = compute_wh
-  SCHEDULE = 'USING CRON 15 */4 * * * America/New_York'
+  SCHEDULE = 'USING CRON 15 */4 * * * Australia/Brisbane'
 AS
   CALL merge_product_to_silver();
 
