@@ -3,6 +3,9 @@
 [![Snowflake](https://img.shields.io/badge/Warehouse-Snowflake-29B5E8?logo=snowflake)](https://www.snowflake.com/)
 [![SQL](https://img.shields.io/badge/Query-SQL-336791?logo=postgresql)]()
 [![Power BI](https://img.shields.io/badge/Visualization-Power%20BI-F2C811?logo=power-bi)](https://powerbi.microsoft.com/)
+![Bronze Layer](https://img.shields.io/badge/Data-Bronze%20Layer-CD7F32)
+![Silver Layer](https://img.shields.io/badge/Data-Silver%20Layer-C0C0C0)
+![Gold Layer](https://img.shields.io/badge/Data-Gold%20Layer-FFD700)
 ## 👤 My Role
 As a **Data Engineer**, I designed and implemented this end-to-end Snowflake solution for PacificRetail.  
 My responsibilities included:  
