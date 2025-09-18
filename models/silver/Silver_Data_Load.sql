@@ -1,43 +1,43 @@
-use database pacificretail_db
-create schema silver
-use pacificretail_db.silver
+create schema silver;
+use pacificretail_db.silver;
 
---Silver Customer Table
-create table if not exists silver.customer (
-    customer_id int,
-    name string,
-    email string,
-    country string,
-    customer_type string,
-    registration_date date,
-    age int,
-    gender string,
-    total_purchases int,
-    last_updated_timestamp timestamp_ntz default current_timestamp()
+-- Silver Customer Table
+CREATE TABLE IF NOT EXISTS SILVER.CUSTOMER (
+    customer_id INT,
+    name STRING,
+    email STRING,
+    country STRING,
+    customer_type STRING,
+    registration_date DATE,
+	age INT,
+    gender STRING,
+    total_purchases INT,
+    last_updated_timestamp TIMESTAMP_NTZ DEFAULT CURRENT_TIMESTAMP()
 );
 
---Silver Product Table
-create table if not exists silver.product (
-    product_id int,
-    name string,
-    category string,
-    brand string,
-    price float,
-    stock_quantity int,
-    rating float,
-    is_active boolean,
-    last_updated_timestamp timestamp_ntz default current_timestamp()
+-- Silver Product Table
+CREATE TABLE IF NOT EXISTS SILVER.PRODUCT (
+	   product_id INT,
+		name STRING,
+		category STRING,
+		brand STRING,
+		price FLOAT,
+		stock_quantity INT,
+		rating FLOAT,
+		is_active BOOLEAN,
+		last_updated_timestamp TIMESTAMP_NTZ DEFAULT CURRENT_TIMESTAMP()
+	);
+
+-- Silver Orders Table
+CREATE TABLE IF NOT EXISTS SILVER.ORDERS (
+    transaction_id STRING,
+    customer_id INT,
+    product_id INT,
+    quantity INT,
+    store_type STRING,
+    total_amount DOUBLE,
+    transaction_date DATE,
+    payment_method STRING,
+    last_updated_timestamp TIMESTAMP_NTZ DEFAULT CURRENT_TIMESTAMP()
 );
 
---Silver Order Table
-create table if not exists silver.orders (
-    transaction_id string,
-    customer_id int,
-    product_id int,
-    quantity int,
-    store_type string,
-    total_amount double,
-    transaction_date date,
-    payment_method string,
-    last_updated_timestamp timestamp_ntz default current_timestamp()
-);
